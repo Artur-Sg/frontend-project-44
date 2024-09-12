@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/Artur-Sg/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Artur-Sg/frontend-project-44/actions)",
   "main": "bin/brain-games.js",
+  "type": "module",
   "scripts": {
-    "start": "node bin/brain-games.js",
+    "start": "make brain-games",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

@@ -1,11 +1,5 @@
 #!/usr/bin/env node
 
-import getUserName from '../src/cli.js';
+import { welcomeAndGetName } from '../src/utils/utils.js';
 
-console.log('Welcome to the Brain Games!');
-
-const userName = getUserName();
-
-console.log(`Hello, ${userName}!`);
-
-export default userName;
+welcomeAndGetName();

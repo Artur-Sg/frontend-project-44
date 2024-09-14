@@ -5,10 +5,10 @@ import { getRandomEquation, calculateEquation } from '../utils/utils.js';
 const brainCalcGameLogic = {
   question: 'What is the result of the expression?',
   getQuestionAndAnswer: () => {
-    const randomEquation = getRandomEquation();
-    const correctAnswer = calculateEquation(randomEquation);
+    const questionValue = getRandomEquation();
+    const correctAnswer = calculateEquation(questionValue);
 
-    return { questionValue: randomEquation, correctAnswer };
+    return { questionValue, correctAnswer };
   },
 };
 

@@ -10,16 +10,20 @@ export const welcomeAndGetName = () => {
   return userName;
 };
 
-export const getRandomNumber = () => Math.floor(Math.random() * 100 + 1);
+export const getRandomNumber = (minValue = 1, maxValue = 100) => Math.floor(
+  Math.random() * maxValue + minValue,
+);
 
 export const getRandomMathOperator = () => {
   const operations = ['+', '-', '*'];
-  const randomIndex = Math.floor(Math.random() * 3);
+  const randomIndex = getRandomNumber(0, 3);
 
   return operations[randomIndex];
 };
 
-export const getRandomEquation = () => `${getRandomNumber()} ${getRandomMathOperator()} ${getRandomNumber()}`;
+export const getRandomEquation = () => `
+  ${getRandomNumber()} ${getRandomMathOperator()} ${getRandomNumber()}
+`;
 
 export const calculateEquation = (equationStr) => {
   const [a, operation, b] = equationStr.split(' ');

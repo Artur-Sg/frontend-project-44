@@ -8,13 +8,12 @@ const brainEvenGameLogic = {
     const [start, sum, answerIndex] = [
       getRandomNumber(),
       getRandomNumber(),
-      getRandomNumber(0, progressionLength),
+      getRandomNumber(0, progressionLength - 1),
     ];
 
     const progression = Array.from({ length: progressionLength }, (_, i) => start + i * sum);
-
     const correctAnswer = String(progression.splice(answerIndex, 1, '..'));
-    const questionValue = progression.join(', ');
+    const questionValue = progression.join(' ');
 
     return { questionValue, correctAnswer };
   },

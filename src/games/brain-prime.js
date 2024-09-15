@@ -13,7 +13,7 @@ const isPrime = (num) => {
 };
 
 const brainPrimeGameLogic = {
-  question: 'Answer "yes" if given number is prime. Otherwise answer "no".',
+  question: "Answer 'yes' if the number is even, otherwise answer 'no'.",
   getQuestionAndAnswer: () => {
     const questionValue = getRandomNumber();
     const correctAnswer = isPrime(questionValue) ? 'yes' : 'no';
